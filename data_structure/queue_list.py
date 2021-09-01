@@ -1,7 +1,7 @@
 #!/bin/python3
 
 #Queue implementation using list
-#Just use append() to push and remove with pop(0) elements in LIFO order
+#Just use append() to push and remove with pop(0) elements in FiFo order
 
 # List is a Python's built-in data structure, but is quite slow because the shifting all elements by on
 # requiring O(n) 

@@ -1,7 +1,7 @@
 #!/bin/python3
 
 #collection_deque implementation using collection.deque class
-#Use append() to add and popleft() elements in LIFO order
+#Use append() to add and popleft() elements in FiFo order
 
 # Deque if preferred over list because append is quicker [ O(1) ], but 
 # pop operations as compared to list [ O(n) ] 
