@@ -5,7 +5,6 @@
 #Use empty() to check if queue is empty 
 #Use full() to check if queue is full with size limit
 from queue import Queue
-import queue
 
 queue_queue = Queue(maxsize=6)
 
