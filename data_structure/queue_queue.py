@@ -1,15 +1,8 @@
 #!/bin/python3
 
-#collection_deque implementation using collection.deque class
-#Use put() to add and get() remove elements in FiFo order
-#Use empty() to check if queue is empty 
-#Use full() to check if queue is full with size limit
 from queue import Queue
 
 queue_queue = Queue(maxsize=6)
-
-# put() to push element in the collection_deque
-
 
 
 print("Check if queue os full:")
