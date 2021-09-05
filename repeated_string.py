@@ -1,59 +1,34 @@
 #!/bin/python3
-#User function Template for python3
 
-# >> Answer
-class Solution:
-    
-    # arr[] : the input array
-    # N : size of the array arr[]
-    
-    #Function to return length of longest subsequence of consecutive integers.
-    def findLongestConseqSubseq(self,arr, N):
-        arr.sort()
-        largest = [1]
-        count=0
-        idx = 0
-        
-        while idx < N:
-
-            if(arr[idx-1]!=arr[idx]):
-                count+=1
-
-            if(idx==N-1 ):
-                largest.append(count)
-                break
-            elif idx+1 <N:
-                if (arr[idx+1] -arr[idx] > 1):
-                    largest.append(count)    
-                    count=0
-            idx += 1
-            
-
-        return max(largest)    
-
-# Input HackerRank
-#{ 
-#  Driver Code Starts
-#Initial Template for Python 3
-
-import atexit
-import io
+import math
+import os
+import random
+import re
 import sys
 
-_INPUT_LINES = sys.stdin.read().splitlines()
-input = iter(_INPUT_LINES).__next__
-_OUTPUT_BUFFER = io.StringIO()
-sys.stdout = _OUTPUT_BUFFER
+#
+# Complete the 'repeatedString' function below.
+#
+# The function is expected to return a LONG_INTEGER.
+# The function accepts following parameters:
+#  1. STRING s
+#  2. LONG_INTEGER n
+#
 
-@atexit.register
+# >>> My Answer
+def repeatedString(s, n):
+   return (s.count("a") * (n // len(s)) + s[:n % len(s)].count("a"))
 
-def write():
-    sys.__stdout__.write(_OUTPUT_BUFFER.getvalue())
-
+# Input HR
 if __name__ == '__main__':
-    t = int(input())
-    for tt in range(t):
-        n=int(input())
-        a = list(map(int, input().strip().split()))
-        print(Solution().findLongestConseqSubseq(a,n))
-# } Driver Code Ends
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    n = int(input().strip())
+
+    result = repeatedString(s, n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
